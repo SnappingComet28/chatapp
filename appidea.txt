@@ -1,0 +1,42 @@
+server code idea:
+
+/:
+    terminal access to the server via a passkey
+    can upload,download and modify docs
+
+/create-user: (takes username and password)
+    takes username
+    takes password
+    checks if a username already exists, denies if exists
+    generates a uuid as Uxxxxxxxxx with 0-9 a-z A-Z
+    enters into db file
+    returns uuid
+    app saves in its location
+
+/login-user: (takes username and password)
+    checks username and password
+    grants their uuid
+    app saves it in its location
+
+/send-msg (takes roomid and uuid and msg)
+    takes uuid and roomid
+    checks if a member of that room with that uuid
+    if member, records time of msg recieved 
+    saves the msg into unread msges db
+    returns OK as msg is recieved by server
+
+/send-media (takes roomid and uuid and media file)
+    downloads the media into root
+    takes uuid and roomid
+    checks if a member of that room with that uuid
+    if member, records time of msg recieved 
+    moves the media to room dir 
+    returns OK as msg is recieved by server
+
+/get-pfp (takes uuid)
+    returns pfp of the uuid in users dir
+    if not any, return a default ico
+
+/update-pfp (takes pfp and uuid)
+    saves the pfp in users dir with same name as uuid
+
