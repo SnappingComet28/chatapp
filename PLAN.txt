@@ -1,0 +1,32 @@
+server:
+    rooms
+        for each room, there will be a directory
+            members.json contain uuid of users
+            msges.db contains msges
+            images and videos on the root of that directory       
+        contains rooms existing and uuid of users connected
+        room with multiple users will have id like RDxxxx
+        private chat will also be considered a room with two persons
+    
+    
+    users:
+        store profile pic with the same uuid as its owner
+        uname/passord in a db file
+
+
+
+FEATURES:
+plain text
+emojis in ;emojiname format
+images/videos
+server terminal on the homescreen accessible with passkey
+encryption:
+    special key generated as ARDxxxxxxx
+    use that key to send access the msges of a room
+misc features like:
+    edit msg in 3min time period
+    msg read and delivered with time
+    profile pic
+voice notes
+
+        
