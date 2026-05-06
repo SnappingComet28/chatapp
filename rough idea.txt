@@ -7,12 +7,15 @@ server:
         contains rooms existing and uuid of users connected
         room with multiple users will have id like RDxxxx
         private chat will also be considered a room with two persons
-    
+        msges broadcasts to every user
     
     users:
         store profile pic with the same uuid as its owner
         uname/passord in a db file
-
+    
+    clock:
+        deletes the msges read by everyone in the room
+    
 
 
 FEATURES:
